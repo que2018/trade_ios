@@ -14,7 +14,10 @@
 		F62E5B7420D4B318007CE83F /* TradeTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62E5B7320D4B318007CE83F /* TradeTableHeaderView.swift */; };
 		F63E599220CB67640086A456 /* PriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63E599120CB67640086A456 /* PriceTableViewCell.swift */; };
 		F694CB9D20C885C700B5347B /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = F694CB9C20C885C600B5347B /* Price.swift */; };
+		F699419220EAB47D00E4475F /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F699419120EAB47D00E4475F /* BottomBorderTextField.swift */; };
+		F699419420EABDCC00E4475F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F699419320EABDCC00E4475F /* RegisterViewController.swift */; };
 		F69C363F20A3AA01009A247A /* ADDR.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69C363E20A3AA01009A247A /* ADDR.swift */; };
+		F6A879BD20E5BB81004BE4B6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A879BC20E5BB81004BE4B6 /* LoginViewController.swift */; };
 		F6ADE0C5209BC499002C1E66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADE0C4209BC499002C1E66 /* AppDelegate.swift */; };
 		F6ADE0C7209BC499002C1E66 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADE0C6209BC499002C1E66 /* HomeViewController.swift */; };
 		F6ADE0C9209BC499002C1E66 /* QuotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADE0C8209BC499002C1E66 /* QuotationViewController.swift */; };
@@ -25,6 +28,8 @@
 		F6ADE0E7209BD04F002C1E66 /* TradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADE0E6209BD04F002C1E66 /* TradeViewController.swift */; };
 		F6ADE0E9209BD142002C1E66 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADE0E8209BD142002C1E66 /* AccountViewController.swift */; };
 		F6ADE0EB209BE54A002C1E66 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADE0EA209BE54A002C1E66 /* TabBarViewController.swift */; };
+		F6E8A07B20E8B6DF00FD9036 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8A07A20E8B6DF00FD9036 /* LoginButton.swift */; };
+		F6F0C2E520E7006300B54A70 /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F0C2E420E7006300B54A70 /* LoadingButton.swift */; };
 		F6FE7E3220D9E1C300FEB676 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FE7E3120D9E1C300FEB676 /* BalanceViewController.swift */; };
 		F6FE7E3420D9E62800FEB676 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FE7E3320D9E62800FEB676 /* OrderViewController.swift */; };
 /* End PBXBuildFile section */
@@ -51,7 +56,10 @@
 		F62E5B7320D4B318007CE83F /* TradeTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeTableHeaderView.swift; sourceTree = "<group>"; };
 		F63E599120CB67640086A456 /* PriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTableViewCell.swift; sourceTree = "<group>"; };
 		F694CB9C20C885C600B5347B /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		F699419120EAB47D00E4475F /* BottomBorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
+		F699419320EABDCC00E4475F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F69C363E20A3AA01009A247A /* ADDR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADDR.swift; sourceTree = "<group>"; };
+		F6A879BC20E5BB81004BE4B6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F6ADE0C1209BC499002C1E66 /* Trade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6ADE0C4209BC499002C1E66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6ADE0C6209BC499002C1E66 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +74,8 @@
 		F6ADE0E6209BD04F002C1E66 /* TradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeViewController.swift; sourceTree = "<group>"; };
 		F6ADE0E8209BD142002C1E66 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		F6ADE0EA209BE54A002C1E66 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		F6E8A07A20E8B6DF00FD9036 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		F6F0C2E420E7006300B54A70 /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		F6FE7E3120D9E1C300FEB676 /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
 		F6FE7E3320D9E62800FEB676 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,17 +170,11 @@
 		F6ADE0C3209BC499002C1E66 /* Trade */ = {
 			isa = PBXGroup;
 			children = (
+				F6F0C2E320E7000D00B54A70 /* Component */,
 				F69C363D20A3A8B2009A247A /* Constant */,
 				F62E5B7020D484D6007CE83F /* Cell */,
 				F694CB9B20C8859600B5347B /* Model */,
-				F6ADE0C4209BC499002C1E66 /* AppDelegate.swift */,
-				F6ADE0C6209BC499002C1E66 /* HomeViewController.swift */,
-				F6ADE0EA209BE54A002C1E66 /* TabBarViewController.swift */,
-				F6ADE0C8209BC499002C1E66 /* QuotationViewController.swift */,
-				F6ADE0E6209BD04F002C1E66 /* TradeViewController.swift */,
-				F6ADE0E8209BD142002C1E66 /* AccountViewController.swift */,
-				F6FE7E3320D9E62800FEB676 /* OrderViewController.swift */,
-				F6FE7E3120D9E1C300FEB676 /* BalanceViewController.swift */,
+				F6F0C2E220E6F14600B54A70 /* Controller */,
 				F6ADE0CD209BC499002C1E66 /* Assets.xcassets */,
 				F6ADE0CA209BC499002C1E66 /* Main.storyboard */,
 				F6ADE0CF209BC499002C1E66 /* LaunchScreen.storyboard */,
@@ -186,6 +190,33 @@
 				F6ADE0DD209BC499002C1E66 /* Info.plist */,
 			);
 			path = TradeTests;
+			sourceTree = "<group>";
+		};
+		F6F0C2E220E6F14600B54A70 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6ADE0C4209BC499002C1E66 /* AppDelegate.swift */,
+				F6ADE0C6209BC499002C1E66 /* HomeViewController.swift */,
+				F6A879BC20E5BB81004BE4B6 /* LoginViewController.swift */,
+				F699419320EABDCC00E4475F /* RegisterViewController.swift */,
+				F6FE7E3120D9E1C300FEB676 /* BalanceViewController.swift */,
+				F6FE7E3320D9E62800FEB676 /* OrderViewController.swift */,
+				F6ADE0E8209BD142002C1E66 /* AccountViewController.swift */,
+				F6ADE0E6209BD04F002C1E66 /* TradeViewController.swift */,
+				F6ADE0C8209BC499002C1E66 /* QuotationViewController.swift */,
+				F6ADE0EA209BE54A002C1E66 /* TabBarViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6F0C2E320E7000D00B54A70 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				F6F0C2E420E7006300B54A70 /* LoadingButton.swift */,
+				F6E8A07A20E8B6DF00FD9036 /* LoginButton.swift */,
+				F699419120EAB47D00E4475F /* BottomBorderTextField.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,19 +386,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F699419220EAB47D00E4475F /* BottomBorderTextField.swift in Sources */,
 				F62E5B6E20D47D88007CE83F /* Trade.swift in Sources */,
 				F6ADE0E7209BD04F002C1E66 /* TradeViewController.swift in Sources */,
 				F62E5B7220D484FE007CE83F /* TradeTableViewCell.swift in Sources */,
+				F699419420EABDCC00E4475F /* RegisterViewController.swift in Sources */,
+				F6A879BD20E5BB81004BE4B6 /* LoginViewController.swift in Sources */,
 				F6FE7E3420D9E62800FEB676 /* OrderViewController.swift in Sources */,
 				F694CB9D20C885C700B5347B /* Price.swift in Sources */,
 				F63E599220CB67640086A456 /* PriceTableViewCell.swift in Sources */,
 				F62E5B7420D4B318007CE83F /* TradeTableHeaderView.swift in Sources */,
+				F6F0C2E520E7006300B54A70 /* LoadingButton.swift in Sources */,
 				F6ADE0E9209BD142002C1E66 /* AccountViewController.swift in Sources */,
 				F6ADE0C9209BC499002C1E66 /* QuotationViewController.swift in Sources */,
 				F6ADE0EB209BE54A002C1E66 /* TabBarViewController.swift in Sources */,
 				F6ADE0C5209BC499002C1E66 /* AppDelegate.swift in Sources */,
 				F6FE7E3220D9E1C300FEB676 /* BalanceViewController.swift in Sources */,
 				F6ADE0C7209BC499002C1E66 /* HomeViewController.swift in Sources */,
+				F6E8A07B20E8B6DF00FD9036 /* LoginButton.swift in Sources */,
 				F69C363F20A3AA01009A247A /* ADDR.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,10 +559,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NXVX896936;
+				DEVELOPMENT_TEAM = WZSLSF6U3A;
 				INFOPLIST_FILE = Trade/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.coin.trade;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiusite.trade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -539,10 +575,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NXVX896936;
+				DEVELOPMENT_TEAM = WZSLSF6U3A;
 				INFOPLIST_FILE = Trade/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.coin.trade;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiusite.trade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

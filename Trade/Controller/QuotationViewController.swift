@@ -76,8 +76,6 @@ class QuotationViewController: UIViewController, UITableViewDelegate, UITableVie
                     
                     let price = Price(title: title, value: value, trend: trend, trend_sign: trend_sign)
                     self.prices.append(price)
-                    
-                    print(title)
                 }
                 
                 DispatchQueue.main.async {

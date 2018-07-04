@@ -23,34 +23,60 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var btgTrend: UILabel!
     @IBOutlet weak var bchTrend: UILabel!
 
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var bottomView: UIView!
     
     @IBOutlet weak var slideShow: ImageSlideshow!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //login button shadow 
-        loginButton.layer.shadowColor = UIColor(red: 86, green: 86, blue: 187, alpha: 0.25).cgColor
-        loginButton.layer.shadowOffset = CGSize(width: 0.0,  height: 3.0)
-        loginButton.layer.shadowOpacity = 1.0
-        loginButton.layer.shadowRadius = 0.0
-        loginButton.layer.masksToBounds = false
-        loginButton.layer.cornerRadius = 0
+        if UserDefaults.standard.bool(forKey: "isLoggedIn")
+        {
+            let username = UserDefaults.standard.string(forKey: "username")!
+            
+            let userLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+            userLabel.textAlignment = .center
+            userLabel.textColor = UIColor.white
+            userLabel.font = userLabel.font.withSize(22)
+            userLabel.text = "Hello, " + username
+            self.bottomView.addSubview(userLabel)
+            
+            userLabel.translatesAutoresizingMaskIntoConstraints = false
+            let horizontalConstraint = NSLayoutConstraint(item: userLabel, attribute: .trailing, relatedBy: .equal, toItem: self.bottomView, attribute: .trailing, multiplier: 1, constant: -27)
+            let verticalConstraint = NSLayoutConstraint(item: userLabel, attribute: .top, relatedBy: .equal, toItem: self.bottomView, attribute: .top, multiplier: 1, constant: 18)
+            let widthConstraint = NSLayoutConstraint(item: userLabel, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 140)
+            let heightConstraint = NSLayoutConstraint(item: userLabel, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 40)
+            
+            self.bottomView.addConstraints([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
+        }
+        else
+        {
+            let loginButton = LoginButton()
+            self.bottomView.addSubview(loginButton)
+            
+            loginButton.translatesAutoresizingMaskIntoConstraints = false
+            
+            let horizontalConstraint = NSLayoutConstraint(item: loginButton, attribute: .trailing, relatedBy: .equal, toItem: self.bottomView, attribute: .trailing, multiplier: 1, constant: -27)
+            let verticalConstraint = NSLayoutConstraint(item: loginButton, attribute: .top, relatedBy: .equal, toItem: self.bottomView, attribute: .top, multiplier: 1, constant: 18)
+            let widthConstraint = NSLayoutConstraint(item: loginButton, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 140)
+            let heightConstraint = NSLayoutConstraint(item: loginButton, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 40)
+            
+            self.bottomView.addConstraints([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
+            
+            //add login click event
+            let loginTouchGesture = UITapGestureRecognizer(target: self, action:  #selector (self.loginAction (_:)))
+            loginButton.addGestureRecognizer(loginTouchGesture)
+        }
         
         slideShow.setImageInputs([
             ImageSource(image: UIImage(named: "slide1")!),
             AlamofireSource(urlString:  ADDR.Slide1)!
-            ])
+        ])
+        
         loadData()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func loadData()  {
+    private func loadData()  {
         guard let url = URL(string: ADDR.Home) else  { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, err) in
@@ -167,5 +193,11 @@ class HomeViewController: UIViewController {
                 }
             } catch let jsonErr {}
         }.resume()
+    }
+    
+    @objc private func loginAction(_ sender:UITapGestureRecognizer){
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let loginViewController = storyBoard.instantiateViewController(withIdentifier: "login_view") as! LoginViewController
+        self.present(loginViewController, animated:true, completion:nil)
     }
 }
