@@ -14,5 +14,6 @@ target 'Trade' do
 
   pod 'ImageSlideshow', '~> 1.5'
   pod "ImageSlideshow/Alamofire"
+  pod "Charts"
 
 end

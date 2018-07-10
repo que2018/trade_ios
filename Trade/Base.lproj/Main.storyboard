@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DA3-fX-hcF">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -835,7 +835,7 @@
         <!--Detail View Controller-->
         <scene sceneID="Kih-R6-A42">
             <objects>
-                <viewController id="DA3-fX-hcF" customClass="DetailViewController" customModule="Trade" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DA3-fX-hcF" customClass="DetailViewController" customModule="Trade" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T3S-Su-jqE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1136,22 +1136,33 @@
                                     <constraint firstItem="ASt-5m-eSK" firstAttribute="width" secondItem="Abs-AX-ySv" secondAttribute="width" id="nGr-7Z-7w9"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CLo-aV-sX6" customClass="CandleStickChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="304" width="414" height="432"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pWp-YO-e7i" firstAttribute="top" secondItem="oEt-HG-GfK" secondAttribute="bottom" id="2GH-mP-dMF"/>
                             <constraint firstItem="pWp-YO-e7i" firstAttribute="centerX" secondItem="nDT-1E-l5l" secondAttribute="centerX" id="3be-cr-vsQ"/>
+                            <constraint firstItem="CLo-aV-sX6" firstAttribute="leading" secondItem="xEN-O4-8k5" secondAttribute="leading" id="I46-Px-vDx"/>
                             <constraint firstItem="pWp-YO-e7i" firstAttribute="trailing" secondItem="oEt-HG-GfK" secondAttribute="trailing" id="LOV-C0-cst"/>
                             <constraint firstItem="nDT-1E-l5l" firstAttribute="top" secondItem="pWp-YO-e7i" secondAttribute="bottom" constant="8" symbolic="YES" id="OyC-os-JDZ"/>
                             <constraint firstItem="pWp-YO-e7i" firstAttribute="leading" secondItem="oEt-HG-GfK" secondAttribute="leading" id="Pxz-oD-QZz"/>
+                            <constraint firstItem="xEN-O4-8k5" firstAttribute="bottom" secondItem="CLo-aV-sX6" secondAttribute="bottom" id="TqH-h6-gqA"/>
                             <constraint firstItem="xEN-O4-8k5" firstAttribute="bottom" secondItem="nDT-1E-l5l" secondAttribute="bottom" constant="432" id="VsA-SN-4gs"/>
                             <constraint firstItem="pWp-YO-e7i" firstAttribute="top" secondItem="T3S-Su-jqE" secondAttribute="top" constant="64" id="frc-xu-vmW"/>
+                            <constraint firstItem="xEN-O4-8k5" firstAttribute="trailing" secondItem="CLo-aV-sX6" secondAttribute="trailing" id="hCE-L7-dfj"/>
                             <constraint firstItem="nDT-1E-l5l" firstAttribute="leading" secondItem="xEN-O4-8k5" secondAttribute="leading" constant="21" id="loL-Cy-lsa"/>
                             <constraint firstItem="pWp-YO-e7i" firstAttribute="leading" secondItem="T3S-Su-jqE" secondAttribute="leading" id="wlp-GM-Mhy"/>
+                            <constraint firstItem="CLo-aV-sX6" firstAttribute="top" secondItem="nDT-1E-l5l" secondAttribute="bottom" id="xc9-NY-YEL"/>
                             <constraint firstAttribute="trailing" secondItem="pWp-YO-e7i" secondAttribute="trailing" id="zoL-dj-2ec"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xEN-O4-8k5"/>
                     </view>
+                    <connections>
+                        <outlet property="chartView" destination="CLo-aV-sX6" id="JPB-aL-CSt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4f-cV-8Bv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
